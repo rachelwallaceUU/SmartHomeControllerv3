@@ -21,6 +21,7 @@ namespace SmartHomeController
         }
 
         // Constructor
+
         public SmartSecurityCamera(int cameraDeviceID, string cameraDeviceName, string cameraResolution) : base(cameraDeviceID, cameraDeviceName)
         {
             this.Resolution = cameraResolution;
