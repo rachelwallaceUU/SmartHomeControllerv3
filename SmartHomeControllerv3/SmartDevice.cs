@@ -36,7 +36,7 @@ namespace SmartHomeController
         // Constructor
         public SmartDevice(int deviceID, string deviceName)
         {
-            this.DeviceID = deviceID; 
+            this.DeviceID = deviceID;
             this.DeviceName = deviceName;
             this.Status = false; // default status for a new smart item
 
@@ -54,5 +54,11 @@ namespace SmartHomeController
             Status = false;
             Console.WriteLine($"{deviceName} with device ID {DeviceID} is now OFF");
         }
+
+        public virtual void GetStatus()
+        {
+            Console.WriteLine($"Device ID: {DeviceID}, Name: {DeviceName}, Status (on or off): {(Status ? "ON" : "OFF")}");
+        }
     }
 }
+
